@@ -11,7 +11,7 @@ gcc Server.c Protocol.c -lpthread -o SERVER
 ```
 gdje je [broj_pokusaja] dozvoljeni broj pokusaja koji ce klijenti imati za pogadanje krizaljke.
 
-Kompilacija i pokretanje servera
+Kompilacija i pokretanje klijenta
 ```
 gcc Client.c Protocol.c -o CLIENT
 ./CLIENT [ime] [ip] [port]
