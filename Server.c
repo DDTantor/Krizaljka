@@ -58,7 +58,7 @@ int obradi_LOGIN(Klijent *klijent)
     fscanf(f, "%s", zagonetka);
     klijent->pogodeno = (char *) malloc(strlen(zagonetka));
     for (int i = 0; i < strlen(zagonetka); ++i)
-        klijent->pogodeno[i] = '*';
+        klijent->pogodeno[i] = '?';
 
     fclose(f);
     return OK;
@@ -127,7 +127,7 @@ int obradi_NOVOSLOVO(Klijent* klijent, const char *poruka)
     f = fopen("zagonetka.txt", "r");
     fscanf(f, "%s", zagonetka);
     for (int i = 0; i < strlen(zagonetka); ++i)
-        if (pogodeno[i] == '*' && zagonetka[i] == poruka[0])
+        if (pogodeno[i] == '?' && zagonetka[i] == poruka[0])
             pogodeno[i] = zagonetka[i], bar_jedno = 1;
 
     (*pokusaja) -= (bar_jedno == 0);

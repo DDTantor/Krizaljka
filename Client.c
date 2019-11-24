@@ -49,7 +49,7 @@ int obradi_NOVOSLOVO(int sock, char *ime)
     
     int gotov = 1;
     for (int i = 0; i < strlen(zagonetka); ++i)
-        gotov &= (zagonetka[i] != '*');
+        gotov &= (zagonetka[i] != '?');
     
     return gotov || (broj_pokusaja == 0);
 }
